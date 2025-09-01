@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,102 +10,80 @@
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
   <link rel="stylesheet" type="text/css" href="/assets/custom.css">
   <style>
-    
-    code {
-        white-space: pre; /* Preserves whitespace and line breaks */
-  font-family: monospace; /* Uses a monospaced font */
-  display: block; /* Ensures it acts as a block-level element */
-  unicode-bidi: embed; /* Handles text directionality */
+  code {
+    white-space: pre;
+    /* Preserves whitespace and line breaks */
+    font-family: monospace;
+    /* Uses a monospaced font */
+    display: block;
+    /* Ensures it acts as a block-level element */
+    unicode-bidi: embed;
+    /* Handles text directionality */
 
-    }
+  }
   </style>
 </head>
+
 <body>
-
   <github-icon style="position: fixed; right: 1em; top: 1em; width: 2em; height: 2em;" href="https://github.com/lnsy-dev/x-s-l-t"></github-icon>
-
-<main>
-
-<h1>XLST Component</h1>
-<p>
-  This component takes an xml and an xsl source and then renders the output. Here is more information about xsl transforms: <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XSLT"> From MDN</a>, <a href="https://www.w3.org/People/maxf/XSLideMaker/tut.pdf">From W3.org</a> and <a href="https://www.w3schools.com/xml/xml_xslt.asp"> From w3schools</a>.
-</p>
-
-
-<h1> How to use</h1>
-
-<p>Import the x-s-l-t.min.js file and include the style and xml like so:</p>
-
-<code>
-&lt;script src=&quot;https://lindseymysse.com/x-s-l-t/dist/x-s-l-t.min.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
-&lt;x-l-s-t xml-src=&quot;data.xml&quot; xsl-src=&quot;style.xsl&quot;&gt;&lt;/x-l-s-t&gt;
-</code>
-
-<p>
-Our xml looks like this:</p>
-<code>
-  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;catalog&gt;
-  &lt;cd&gt;
-    &lt;title&gt;Empire Burlesque&lt;/title&gt;
-    &lt;artist&gt;Bob Dylan&lt;/artist&gt;
-    &lt;country&gt;USA&lt;/country&gt;
-    &lt;company&gt;Columbia&lt;/company&gt;
-    &lt;price&gt;10.90&lt;/price&gt;
-    &lt;year&gt;1985&lt;/year&gt;
-  &lt;/cd&gt;
-  &lt;cd&gt;
-    &lt;title&gt;Hide your heart&lt;/title&gt;
-    &lt;artist&gt;Bonnie Tyler&lt;/artist&gt;
-    &lt;country&gt;UK&lt;/country&gt;
-    &lt;company&gt;CBS Records&lt;/company&gt;
-    &lt;price&gt;9.90&lt;/price&gt;
-    &lt;year&gt;1988&lt;/year&gt;
-  &lt;/cd&gt;
-
-...
-
-  &lt;/cd&gt;
-&lt;/catalog&gt;
-
-
-
-</code>
-
-<p>Our xsl style looks like this: </p>
-
-<code>
-  
-  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-
-&lt;xsl:stylesheet version=&quot;1.0&quot;
-xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
-
-&lt;xsl:template match=&quot;/&quot;&gt;
-  
-  &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
-    &lt;p&gt;
-      &lt;b&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/b&gt;:
-      &lt;xsl:value-of select=&quot;artist&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/xsl:for-each&gt;
-
-&lt;/xsl:template&gt;
-
-&lt;/xsl:stylesheet&gt;
-</code>
-
-<p>
-  This renders:
-
-
-</p>
-
-<x-l-s-t xml-src="./data.xml" xsl-src="./style.xsl" style="border: 1px solid grey; padding: 1em; display:block"></x-l-s-t>
-
-
-</main>
-
-
+  <main>
+    <div class="wrapper">
+      <h1>XLST Component</h1>
+      <p>
+        This component takes an xml and an xsl source and then renders the output. Here is more information about xsl transforms: <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XSLT"> From MDN</a>, <a href="https://www.w3.org/People/maxf/XSLideMaker/tut.pdf">From W3.org</a> and <a href="https://www.w3schools.com/xml/xml_xslt.asp"> From w3schools</a>.
+      </p>
+      <h1> How to use</h1>
+      <p>Import the x-s-l-t.min.js file and include the style and xml like so:</p>
+      <code>
+        &lt;script src=&quot;https://lindseymysse.com/x-s-l-t/dist/x-s-l-t.min.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+        &lt;x-l-s-t xml-src=&quot;data.xml&quot; xsl-src=&quot;style.xsl&quot;&gt;&lt;/x-l-s-t&gt;
+      </code>
+      <p>
+        Our xml looks like this:</p>
+      <code>
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;catalog&gt;
+        &lt;cd&gt;
+        &lt;title&gt;Empire Burlesque&lt;/title&gt;
+        &lt;artist&gt;Bob Dylan&lt;/artist&gt;
+        &lt;country&gt;USA&lt;/country&gt;
+        &lt;company&gt;Columbia&lt;/company&gt;
+        &lt;price&gt;10.90&lt;/price&gt;
+        &lt;year&gt;1985&lt;/year&gt;
+        &lt;/cd&gt;
+        &lt;cd&gt;
+        &lt;title&gt;Hide your heart&lt;/title&gt;
+        &lt;artist&gt;Bonnie Tyler&lt;/artist&gt;
+        &lt;country&gt;UK&lt;/country&gt;
+        &lt;company&gt;CBS Records&lt;/company&gt;
+        &lt;price&gt;9.90&lt;/price&gt;
+        &lt;year&gt;1988&lt;/year&gt;
+        &lt;/cd&gt;
+        ...
+        &lt;/cd&gt;
+        &lt;/catalog&gt;
+      </code>
+      <p>Our xsl style looks like this: </p>
+      <code>
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;xsl:stylesheet version=&quot;1.0&quot;
+        xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+        &lt;xsl:template match=&quot;/&quot;&gt;
+        &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
+        &lt;p&gt;
+        &lt;b&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/b&gt;:
+        &lt;xsl:value-of select=&quot;artist&quot; /&gt;
+        &lt;/p&gt;
+        &lt;/xsl:for-each&gt;
+        &lt;/xsl:template&gt;
+        &lt;/xsl:stylesheet&gt;
+      </code>
+      <p>
+        This renders:
+      </p>
+      <x-l-s-t xml-src="./data.xml" xsl-src="./style.xsl" style="border: 1px solid grey; padding: 1em; display:block"></x-l-s-t>
+    </div>
+  </main>
 </body>
+
 </html>
