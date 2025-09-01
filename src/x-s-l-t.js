@@ -24,7 +24,7 @@
 
 
 class X_S_L_T extends HTMLElement {
-  connectedCallback(){
+  connectedCallback() {
     this.processXmlAndXsl();
   }
 
@@ -62,7 +62,7 @@ class X_S_L_T extends HTMLElement {
 
       // Transform the XML using XSL
       const transformedHTML = await this.transformXml(xmlDoc, xslDoc);
-      
+
       // Render the result directly to the element
       this.innerHTML = transformedHTML;
 
@@ -85,18 +85,17 @@ class X_S_L_T extends HTMLElement {
 
         // Transform the XML
         const resultFragment = processor.transformToFragment(xmlDoc, document);
-        
+
         // Convert document fragment to HTML string
         const div = document.createElement('div');
         div.appendChild(resultFragment.cloneNode(true));
-        
+
         resolve(div.innerHTML);
       } catch (error) {
         reject(new Error(`XSLT transformation failed: ${error.message}`));
       }
     });
   }
-
 
   async fetchResource(url) {
     try {
@@ -111,7 +110,6 @@ class X_S_L_T extends HTMLElement {
     }
   }
 
-
   static get observedAttributes() {
     return ['xml-src', 'xsl-src'];
   }
@@ -121,9 +119,6 @@ class X_S_L_T extends HTMLElement {
       await this.processXmlAndXsl();
     }
   }
-
 }
 
 customElements.define('x-l-s-t', X_S_L_T)
-
-
