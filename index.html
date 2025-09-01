@@ -41,42 +41,42 @@
       <p>
         Our xml looks like this:</p>
       <code>
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        &lt;catalog&gt;
-        &lt;cd&gt;
-        &lt;title&gt;Empire Burlesque&lt;/title&gt;
-        &lt;artist&gt;Bob Dylan&lt;/artist&gt;
-        &lt;country&gt;USA&lt;/country&gt;
-        &lt;company&gt;Columbia&lt;/company&gt;
-        &lt;price&gt;10.90&lt;/price&gt;
-        &lt;year&gt;1985&lt;/year&gt;
-        &lt;/cd&gt;
-        &lt;cd&gt;
-        &lt;title&gt;Hide your heart&lt;/title&gt;
-        &lt;artist&gt;Bonnie Tyler&lt;/artist&gt;
-        &lt;country&gt;UK&lt;/country&gt;
-        &lt;company&gt;CBS Records&lt;/company&gt;
-        &lt;price&gt;9.90&lt;/price&gt;
-        &lt;year&gt;1988&lt;/year&gt;
-        &lt;/cd&gt;
-        ...
-        &lt;/cd&gt;
-        &lt;/catalog&gt;
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+  &lt;catalog&gt;
+    &lt;cd&gt;
+      &lt;title&gt;Empire Burlesque&lt;/title&gt;
+      &lt;artist&gt;Bob Dylan&lt;/artist&gt;
+      &lt;country&gt;USA&lt;/country&gt;
+      &lt;company&gt;Columbia&lt;/company&gt;
+      &lt;price&gt;10.90&lt;/price&gt;
+      &lt;year&gt;1985&lt;/year&gt;
+    &lt;/cd&gt;
+    &lt;cd&gt;
+      &lt;title&gt;Hide your heart&lt;/title&gt;
+      &lt;artist&gt;Bonnie Tyler&lt;/artist&gt;
+      &lt;country&gt;UK&lt;/country&gt;
+      &lt;company&gt;CBS Records&lt;/company&gt;
+      &lt;price&gt;9.90&lt;/price&gt;
+      &lt;year&gt;1988&lt;/year&gt;
+    &lt;/cd&gt;
+    ...
+    &lt;/cd&gt;
+  &lt;/catalog&gt;
       </code>
       <p>Our xsl style looks like this: </p>
       <code>
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        &lt;xsl:stylesheet version=&quot;1.0&quot;
-        xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
-        &lt;xsl:template match=&quot;/&quot;&gt;
-        &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
-        &lt;p&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot;
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+  &lt;xsl:template match=&quot;/&quot;&gt;
+    &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
+      &lt;p&gt;
         &lt;b&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/b&gt;:
         &lt;xsl:value-of select=&quot;artist&quot; /&gt;
-        &lt;/p&gt;
-        &lt;/xsl:for-each&gt;
-        &lt;/xsl:template&gt;
-        &lt;/xsl:stylesheet&gt;
+      &lt;/p&gt;
+    &lt;/xsl:for-each&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
       </code>
       <p>
         This renders:
