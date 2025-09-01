@@ -1,8 +1,12 @@
+/**
+ * X-L-S-T 
+ *
+ * @class      X_L_S_T (name)
+ */
 
 
 
-
-class X_L_S_T extends HTMLElement {
+class X_S_L_T extends HTMLElement {
   connectedCallback(){
     this.processXmlAndXsl();
   }
@@ -103,6 +107,6 @@ class X_L_S_T extends HTMLElement {
 
 }
 
-customElements.define('x-l-s-t', X_L_S_T)
+customElements.define('x-l-s-t', X_S_L_T)
 
 
