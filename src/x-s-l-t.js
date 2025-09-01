@@ -1,9 +1,26 @@
 /**
- * X-L-S-T 
+ *    X-S-L-T:    XML and XSLT Processor Custom Element
  *
- * @class      X_L_S_T (name)
+ * This custom HTML element, <x-l-s-t>, allows for client-side transformation
+ * of XML data using XSLT stylesheets. Upon attachment and whenever the attributes
+ * 'xml-src' or 'xsl-src' change, it fetches and processes the specified XML and XSL
+ * documents.
+ *
+ * It then uses the XSLTProcessor API to transform the XML according to the specified
+ * XSL, displaying the result in the element's inner HTML.
+ * 
+ * Attributes:
+ *  - xml-src: URL to the XML document.
+ *  - xsl-src: URL to the XSL stylesheet.
+ *
+ * Methods:
+ *  - connectedCallback(): Invoked when the element is connected to the DOM.
+ *  - processXmlAndXsl(): Processes the XML and XSL specified by the attributes.
+ *  - hasParsingError(doc): Checks if a parsed document has errors.
+ *  - transformXml(xmlDoc, xslDoc): Transforms the XML using the XSL document.
+ *  - fetchResource(url): Fetches the text content from a given URL.
+ * 
  */
-
 
 
 class X_S_L_T extends HTMLElement {
