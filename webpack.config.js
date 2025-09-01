@@ -5,10 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 dotenv.config();
-const file_name = process.env.OUTPUT_FILENAME || 'bundle.min.js';
+const file_name = process.env.OUTPUT_FILENAME || 'x-s-l-t.min.js';
 
 module.exports = {
-  entry: ['./src/index.js','./styles/index.css'],
+  entry: ['./src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: file_name

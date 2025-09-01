@@ -3,53 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vanilla JS / CSS boilerplate</title>
-  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <title>XLST Component Demo</title>
   <script src="./src/index.js" type="module"></script>
 </head>
 <body>
 
-  <header>
-    <img src="./assets/splash.jpg" alt="Boilerplate Image">
-    <h1>Vanilla JS / CSS boilerplate</h1>
-    <h2>By <a href="https://lnsy.dev/" rel="author">LNSY</a></h2>
-  </header>
+<h1>XLST Component</h1>
+<p>
+  This component takes an xml and an xsl source and then renders the output
+</p>
 
-  <main>
-    <nav>
-      <h1>Navigation</h1>
-      <ul>
-        <li>A Holy Grail Layout</li>
-        <li>Here</li>
-      </ul>
-    </nav>
-    <article>
-      <custom-html-element></custom-html-element>
-      <p>For generating JS and CSS libraries in plain CSS, JS, and HTML.</p>
-      <p>For more information, see the README</p>
 
-      <ul>
-        <li><confirmation>This is a confirmation</confirmation></li>
-        <li><warning>This is a warning tag</warning></li>
-        <li><error>This is an error tag</error></li>
-      </ul>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </article>
-    <aside>
-      <h1>Aside</h1>
-      <p>The aside is a great place for tag clouds, affiliate links, etc.</p>
-    </aside>
-  </main>
+<code>
+&lt;x-l-s-t xml-src=&quot;data.xml&quot; xsl-src=&quot;style.xsl&quot;&gt;&lt;/x-l-s-t&gt;
+</code>
 
-  <footer>
-    <p>© 2024 LNSY. All rights reserved.</p>
-  </footer>
+
+<x-l-s-t xml-src="data.xml" xsl-src="style.xsl"></x-l-s-t>
 
 </body>
 </html>
